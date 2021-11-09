@@ -1,0 +1,2165 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css");
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  min-height: calc(100vh - 305px);
+  font-family: "Staatliches", cursive;
+}
+
+// Button2
+.button2 {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  transition: 0.5s;
+  border: 1px solid #ff013c;
+  background: transparent;
+  &:hover {
+    border: 1px solid transparent;
+    background: #ff013c url("https://i.postimg.cc/wBXGXbWN/pixel.png");
+    transition-delay: 0.8s;
+    background-size: 180px;
+    animation: animate 0.8s steps(8) forwards;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: -480px;
+  }
+}
+// Button2
+a {
+  color: initial;
+  text-decoration: initial;
+  background-color: transparent;
+  transition: 0.3s all ease;
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+    outline: none !important;
+  }
+}
+// Button1
+.button1,
+.button1::after {
+  padding: 10px;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  border: 0;
+  color: #fff;
+  box-shadow: 6px 0px 0px white;
+  outline: transparent;
+  position: relative;
+}
+
+.button1::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 3%,
+    #00e6f6 3%,
+    #02ff2c 5%,
+    #ff013c 5%
+  );
+  text-shadow: -3px -3px 0px #000000, 3px 3px 0px #00e6f6;
+  clip-path: var(--slice-0);
+}
+
+.button1:hover::after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, -5px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 5px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-5px, 5px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+.custom-button i {
+  margin-left: 0.9375rem;
+}
+// Button1
+// Button3
+.button3 {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 10px;
+
+  position: relative;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 5px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 4px;
+  &:hover {
+    background: #ff013c;
+    box-shadow: 0px 2px 10px 5px white;
+    color: black;
+  }
+
+  &:after {
+    content: "";
+    background: white;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+
+  &:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Button2
+.swal-modal {
+  font-family: "Georama", sans-serif;
+  .swal-text {
+    text-align: center !important;
+  }
+}
+//404 Page
+.page404 {
+  color: #dbe2fb;
+  line-height: 1.75rem;
+  overflow-x: hidden;
+  background: #001232;
+  .section-404 {
+    margin-top: 3.125rem;
+    min-height: 100vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    .thumb-404 {
+      max-width: 60.375rem;
+      margin: 0 auto 2.125rem;
+    }
+    .title {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: capitalize;
+      margin-bottom: 2.5rem;
+      color: white;
+    }
+  }
+}
+//End 404 Page
+
+//Navbar
+.sign {
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #ffe6ff;
+  text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff6565,
+    -0.2rem 0.1rem 1rem #ff6565, 0.2rem 0.1rem 1rem #ff6565,
+    0 -0.5rem 2rem #ff2424, 0 0.5rem 3rem #ff2424;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff6565,
+      -0.2rem 0.1rem 1rem #ff6565, 0.2rem 0.1rem 1rem #ff6565,
+      0 -0.5rem 2rem #ff2424, 0 0.5rem 3rem #ff2424;
+  }
+  28%,
+  33% {
+    color: #ff6565;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #ff2424;
+    text-shadow: none;
+  }
+}
+
+.flicker1 {
+  animation: shine 2s forwards, blink 3s 4s infinite;
+}
+
+.flicker2 {
+  animation: shine 2s forwards, blink 6s 2s infinite;
+}
+.flicker3 {
+  animation: shine 2s forwards, blink 8s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #6b1839;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff6565,
+      -0.2rem 0.1rem 1rem #ff6565, 0.2rem 0.1rem 1rem #ff6565,
+      0 -0.5rem 2rem #ff2424, 0 0.5rem 3rem #ff2424;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.navbar {
+  background: black;
+  box-shadow: 0 0 20px 0 white;
+
+  .navbar-brand {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .navbar-collapse {
+    text-align: center;
+    flex-grow: initial !important;
+    .navbar-nav {
+      .nav-item {
+        position: relative;
+        &:after {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 0.2rem;
+          position: absolute;
+          bottom: 8px;
+
+          transition: all 0.4s linear;
+          background-image: linear-gradient(
+            to right,
+            rgb(255, 100, 100),
+            rgb(255, 59, 59)
+          );
+          box-shadow: 0 0 20px 0 #fbbd61;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+      }
+      .nav-link {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        transition: all 0.5s ease;
+        color: white;
+
+        &:hover {
+          color: rgba(255, 0, 0, 0.678);
+        }
+      }
+      .nav-link.active::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.2rem;
+        position: absolute;
+        bottom: 8px;
+        transition: all 0.4s linear;
+        background-image: linear-gradient(
+          to right,
+          rgb(255, 100, 100),
+          rgb(255, 59, 59)
+        );
+        box-shadow: 0 0 20px 0 #fbbd61;
+      }
+    }
+    .button1 {
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+  }
+  .navbar-toggler {
+    background-color: rgba(255, 0, 0, 0.678);
+    color: white;
+  }
+}
+
+//End Navbar
+//Info
+.info {
+  background-color: rgba(0, 0, 0, 0.911);
+  background-image: url("./assets/img/asfalt-light.png");
+  input {
+    color: black;
+  }
+  h1 {
+    color: white;
+  }
+  padding: 40px;
+  .ant-tabs {
+    background-color: transparent;
+    color: white;
+    margin-top: 40px;
+    .ant-tabs-nav {
+      margin-bottom: 5%;
+      &::before {
+        border: initial;
+      }
+    }
+    .ant-tabs-tab {
+      background-color: white;
+      padding: 10px;
+      span {
+        font-size: 12px;
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+      .ant-tabs-tab-btn {
+        color: black;
+        margin: auto;
+      }
+      &.ant-tabs-tab-active {
+        background-color: red;
+        span {
+          color: white;
+        }
+        .ant-tabs-tab-btn {
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      display: none;
+    }
+    .ant-tabs-content-holder {
+      border: initial !important;
+      box-sizing: border-box;
+      height: 700px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+        width: 10px;
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        background-color: #ff013c;
+      }
+    }
+  }
+  .form {
+    background: black;
+    box-shadow: 5px 5px 10px #ff013c;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border: 5px solid white;
+
+    &:hover {
+      animation: initial;
+    }
+    .name {
+      cursor: no-drop;
+      &:hover {
+        width: 50%;
+      }
+    }
+    input {
+      font-family: "Georama", sans-serif;
+      border: 0;
+      outline: none;
+      box-shadow: none;
+      height: 30px;
+      line-height: 30px;
+      padding: 8px 15px;
+      width: 100%;
+      font-size: 12px;
+      margin-bottom: 15px;
+      transition: all 0.5s ease 0s;
+      &:last-child {
+        border-bottom: 0;
+      }
+      &::-webkit-input-placeholder {
+        color: rgba(0, 0, 0, 0.4);
+      }
+
+      &:hover {
+        transition: ease 0.5s;
+      }
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+  ::-webkit-input-placeholder {
+    font-size: 1.3em;
+  }
+
+  .submit {
+    min-width: 50%;
+    color: white;
+    background-color: #0e3721;
+    font-size: 20px;
+  }
+
+  .submit:hover {
+    box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+    transform: translateY(-3px);
+    width: 300px;
+    border-top: 5px solid #0e3750;
+    border-radius: 0%;
+  }
+
+  .ant-tabs > .ant-tabs-nav .ant-tabs-nav-more,
+  .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-more {
+    background: white;
+    margin-left: 10px;
+    svg {
+      color: black;
+    }
+  }
+  .history {
+    .purchase {
+      margin-bottom: 2%;
+      font-family: "Georama", sans-serif;
+      .card {
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: url("./assets/img/bgAcc.png");
+        border: none;
+        text-align: center;
+        border-width: 5px;
+        border-style: solid;
+        border-top: initial;
+        border-radius: 0;
+        border-image-source: linear-gradient(
+          to right,
+          #f7797d,
+          #fbd786,
+          #c6ffdd
+        );
+        border-image-slice: 20;
+        margin-bottom: 2%;
+        h3 {
+          color: #ff013c;
+          font-weight: bolder;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          box-sizing: border-box;
+          color: white;
+          font-size: 10px;
+        }
+        h4 {
+          font-weight: bolder;
+          font-size: 10px;
+          color: white;
+          white-space: nowrap;
+        }
+
+        p {
+          font-weight: bolder;
+          font-size: 10px;
+          color: white;
+          white-space: pre;
+          display: inline;
+        }
+        .seatNumber {
+          margin-right: 5px;
+          &:last-child {
+            margin-right: initial;
+          }
+        }
+      }
+      .topPurchase {
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: url("./assets/img/bgAcc.png");
+        width: 100%;
+        height: 200px;
+        border-width: 5px;
+        border-style: solid;
+        border-image-source: linear-gradient(
+          to right,
+          #f7797d,
+          #fbd786,
+          #c6ffdd
+        );
+        border-image-slice: 20;
+
+        h1 {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: rgb(255, 255, 255);
+        }
+        .ticket {
+          box-sizing: border-box;
+          text-align: center;
+          width: 100%;
+          height: 100%;
+          display: flex;
+
+          .item {
+            margin: auto;
+            i {
+              margin-right: 10px;
+            }
+            h1 {
+              font-family: "Georama", sans-serif;
+              font-size: 15px;
+              font-weight: bolder;
+              color: white;
+              margin-bottom: 5%;
+              color: #ff013c;
+            }
+            h3 {
+              display: inline;
+              margin-bottom: 50px;
+              font-size: 12px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//End Info
+//Slider
+.homeSlider {
+  .slick-dots {
+    bottom: 5%;
+    i {
+      font-size: 20px;
+      color: white;
+      &:hover {
+        color: #ff013c;
+        opacity: 0.5;
+      }
+    }
+    .slick-active {
+      i {
+        color: #ff013c;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .slick-arrow {
+    display: none !important;
+  }
+}
+//End Slider
+
+//LoginPage
+
+.loginPage {
+  background: url("./assets/img/bg2.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Georama", sans-serif;
+  p {
+    color: #ff013c;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  .form-structor {
+    background-image: url("./assets/img/bgRegister.jpg");
+    background-size: contain;
+    border-radius: 15px;
+    height: 550px;
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      opacity: 0.8;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgb(0, 0, 0);
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: 500px;
+    }
+
+    .signup {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      width: 65%;
+      z-index: 5;
+      -webkit-transition: all 0.3s ease;
+
+      &.slide-up {
+        top: 5%;
+        -webkit-transform: translate(-50%, 0%);
+        -webkit-transition: all 0.3s ease;
+      }
+
+      &.slide-up .form-holder,
+      &.slide-up .submit-btn {
+        opacity: 0;
+        display: none;
+      }
+
+      &.slide-up .form-title {
+        font-size: 1em;
+        cursor: pointer;
+      }
+
+      &.slide-up .form-title span {
+        margin-right: 5px;
+        opacity: 1;
+        display: initial;
+        -webkit-transition: all 0.3s ease;
+      }
+
+      .form-title {
+        color: #fff;
+        font-size: 1.7em;
+        text-align: center;
+        font-family: "Staatliches", cursive;
+      }
+
+      .form-holder {
+        border-radius: 15px;
+        background-color: rgb(199, 156, 156);
+        overflow: hidden;
+        margin-top: 50px;
+        opacity: 1;
+        display: initial;
+        -webkit-transition: all 0.3s ease;
+
+        input {
+          border: 0;
+          outline: none;
+          box-shadow: none;
+          display: block;
+          height: 30px;
+          line-height: 30px;
+          padding: 8px 15px;
+          border-bottom: 1px solid #eee;
+          width: 100%;
+          font-size: 12px;
+          margin-bottom: 10px;
+          &:last-child {
+            border-bottom: 0;
+          }
+          &::-webkit-input-placeholder {
+            color: rgba(0, 0, 0, 0.4);
+          }
+        }
+      }
+
+      .submit-btn {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: rgba(256, 256, 256, 0.7);
+        border: 0;
+        border-radius: 15px;
+        display: block;
+        margin: 15px auto;
+        padding: 15px 45px;
+        width: 100%;
+        font-size: 13px;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: 1;
+        display: initial;
+        -webkit-transition: all 0.3s ease;
+        font-family: "Staatliches", cursive;
+        &:hover {
+          transition: all 0.3s ease;
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+
+    .login {
+      position: absolute;
+      top: 20%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgb(255, 255, 255);
+      z-index: 5;
+      -webkit-transition: all 0.3s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        -webkit-transform: translate(-50%, 0);
+        background-color: rgb(255, 255, 255);
+        width: 200%;
+        height: 250px;
+        border-radius: 50%;
+        z-index: 4;
+        -webkit-transition: all 0.3s ease;
+      }
+
+      .center {
+        position: absolute;
+        top: calc(50% - 10%);
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        width: 65%;
+        z-index: 5;
+        -webkit-transition: all 0.3s ease;
+
+        .form-title {
+          color: #000;
+          font-size: 1.7em;
+          text-align: center;
+          font-family: "Staatliches", cursive;
+        }
+
+        .form-holder {
+          border-radius: 15px;
+          background-color: rgb(255, 255, 255);
+
+          overflow: hidden;
+          margin-top: 50px;
+          opacity: 1;
+          display: initial;
+          -webkit-transition: all 0.3s ease;
+          form {
+            width: 100%;
+            input {
+              border: 0;
+              outline: none;
+              box-shadow: none;
+              display: block;
+              height: 30px;
+              line-height: 30px;
+              padding: 8px 15px;
+              border-bottom: 1px solid #eee;
+              width: 100%;
+              font-size: 12px;
+              margin-bottom: 5%;
+              &:last-child {
+                border-bottom: 0;
+              }
+              &::-webkit-input-placeholder {
+                color: rgba(0, 0, 0, 0.4);
+              }
+            }
+          }
+        }
+
+        .submit-btn {
+          background-color: #6b92a4;
+          color: rgba(256, 256, 256, 0.7);
+          border: 0;
+          border-radius: 15px;
+          display: block;
+          margin: 15px auto;
+          padding: 15px 45px;
+          width: 100%;
+          font-size: 13px;
+          font-weight: bold;
+          cursor: pointer;
+          opacity: 1;
+          display: initial;
+          -webkit-transition: all 0.3s ease;
+          font-family: "Staatliches", cursive;
+          &:hover {
+            transition: all 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.8);
+          }
+        }
+      }
+
+      &.slide-up {
+        top: 90%;
+        -webkit-transition: all 0.3s ease;
+      }
+
+      &.slide-up .center {
+        top: 10%;
+        -webkit-transform: translate(-50%, 0%);
+        -webkit-transition: all 0.3s ease;
+      }
+
+      &.slide-up .form-holder,
+      &.slide-up .submit-btn {
+        opacity: 0;
+        display: none;
+        -webkit-transition: all 0.3s ease;
+      }
+
+      &.slide-up .form-title {
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease;
+      }
+    }
+  }
+}
+//End LoginPage
+
+//Movie Card
+.movieItem {
+  min-height: calc(100vh - 305px);
+  background-color: rgba(0, 0, 0, 0.911);
+  background-image: url("./assets/img/asfalt-light.png");
+  padding: 80px 0;
+
+  h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+  }
+  h2 {
+    font-family: "Georama", sans-serif;
+  }
+
+  .button1,
+  .button1::after {
+    box-shadow: 6px 0px 0px white;
+    font-size: 0.7rem;
+  }
+  .button1 {
+    &.active {
+      box-shadow: 6px 0px 0px #ff013c;
+      color: #ff013c;
+      background: linear-gradient(45deg, transparent 5%, white 5%);
+    }
+  }
+
+  .fa-times-circle {
+    position: absolute;
+    top: -10%;
+    z-index: 9;
+    right: 0;
+    font-size: 1.5rem;
+    color: white;
+    padding: 0;
+    border: 0;
+    &:hover {
+      color: rgb(255, 100, 100);
+    }
+  }
+
+  .nav-link {
+    &:after {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 0.2rem;
+      position: absolute;
+      bottom: 8px;
+      left: 25%;
+      transition: all 0.4s linear;
+      background-image: linear-gradient(
+        to right,
+        rgb(255, 100, 100),
+        rgb(255, 59, 59)
+      );
+    }
+  }
+  .colMovie {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color: transparent;
+  }
+  .movieScroll {
+    max-height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 10px;
+      background-color: white;
+    }
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+      background-color: white;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 50px;
+      background-color: #ff013c;
+    }
+  }
+  .card {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    transition: all 0.6s linear;
+    text-align: center;
+    &:hover {
+      box-shadow: 0 0 5px 5px rgba(255, 59, 59, 0.8);
+    }
+    &:hover .face.face2,
+    &:active .face.face2 {
+      transition: all 0.6s linear;
+      transform: translateY(0);
+    }
+    img {
+      width: 100%;
+      height: 150px;
+    }
+    .face {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      &.face2 {
+        box-sizing: border-box;
+        padding: 15px;
+        transition: all 0.4s linear;
+        background: rgba(0, 0, 0, 0.6);
+        transform: translateY(75%);
+        height: 100%;
+        .trailer {
+          margin-bottom: 20px;
+          margin-top: 10px;
+          .fa-play-circle {
+            color: white;
+            font-size: 20px;
+            transition: all 0.6s linear;
+            &:hover {
+              color: #ff013c;
+              transition: all 0.6s linear;
+            }
+          }
+        }
+        .fa-star {
+          color: yellow;
+          font-size: 10px;
+        }
+        span {
+          font-size: 10px;
+        }
+
+        .button1,
+        .button1::after {
+          margin-left: 10px;
+
+          font-size: 0.2px;
+          font-family: "Georama", sans-serif;
+        }
+        a {
+          text-align: center;
+          background-color: transparent;
+          color: white;
+          text-decoration: initial;
+          background-color: transparent;
+          &:hover h2 {
+            color: #ff013c;
+            transition: all 0.6s linear;
+          }
+          h2 {
+            text-align: center;
+            transition: all 0.3s linear;
+            margin: 0;
+            padding: 0;
+
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: white;
+            font-size: 0.5rem;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+}
+//Movie Card
+// cinemaComplex
+.cinemaComplex {
+  display: none;
+  padding: 80px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url("./assets/img/asfalt-light.png");
+  font-family: "Georama", sans-serif;
+  a {
+    font-weight: bolder;
+    color: white;
+    text-decoration: initial;
+    background-color: transparent;
+    transition: 0.3s all ease;
+
+    &:hover,
+    &:focus {
+      color: white;
+      text-decoration: none !important;
+      outline: none !important;
+    }
+  }
+  p {
+    font-size: 1.2rem;
+
+    color: white;
+  }
+  h1 {
+    color: white;
+    font-family: "Staatliches", cursive;
+  }
+  .ant-tabs {
+    background-color: black;
+
+    .ant-tabs-tab-btn {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .ant-tabs-tabpane {
+      padding-left: initial !important;
+
+      .content {
+        text-align: left;
+        width: 100%;
+        p {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .leftr {
+      height: 500px;
+      .movies {
+        padding: 8px 24px;
+        p {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 320px;
+        }
+      }
+      span.ageType {
+        font-size: 10px;
+        background-color: #ff013c;
+        border-radius: 4px;
+        padding: 4px 4px;
+        color: #fff;
+        min-width: 33px;
+        text-align: center;
+        display: inline-block;
+      }
+
+      .ant-tabs-content-holder {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+          width: 10px;
+          background-color: white;
+        }
+        &::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+          background-color: white;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 50px;
+          background-color: #ff013c;
+        }
+      }
+      .ant-tabs-nav {
+        width: 50%;
+      }
+      .ant-tabs {
+        border-radius: none;
+      }
+    }
+  }
+}
+// cinemaComplex
+// HomeDownApp
+.HomeDownApp {
+  background-image: url("./assets/img/bgApp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 80px 0;
+  font-family: "Georama", sans-serif;
+  .button1,
+  .button1::after {
+    font-size: 10px;
+  }
+  a {
+    color: #ff013c;
+    text-decoration: initial;
+    background-color: transparent;
+    transition: 0.3s all ease;
+    &:hover,
+    &:focus {
+      text-decoration: none !important;
+      outline: none !important;
+    }
+  }
+  h1 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 10px;
+  }
+  .mobile {
+    position: relative;
+    .notch-container {
+      position: absolute;
+      top: 0%;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .notch-container .notch {
+      width: 20%;
+      height: 10px;
+      margin: 0 auto;
+      background-color: rgb(0, 0, 0);
+      border-bottom-left-radius: 2.334vh;
+      border-bottom-right-radius: 2.334vh;
+    }
+
+    .slick-slider {
+      padding: 0 28%;
+    }
+    .slick-list {
+      border-radius: 20px;
+    }
+    .slick-dots,
+    .slick-arrow {
+      display: none !important;
+    }
+  }
+}
+// End HomeDownApp
+// BookingTicket
+.BookingTicket {
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url("./assets/img/asfalt-light.png");
+  padding: 40px 0;
+  font-family: "Georama", sans-serif;
+  h1 {
+    font-size: 10px;
+  }
+  .seat {
+    flex: 0 0 auto;
+    width: 5.25%;
+    margin: 0.5%;
+    height: auto;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+    button {
+      letter-spacing: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      font-size: 2vw;
+    }
+  }
+  .seatDaDat {
+    cursor: no-drop;
+    background-color: grey;
+    border-radius: 30%;
+  }
+  .seatTrong {
+    background-color: white;
+    border-radius: 30%;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .seatDangChon {
+    background: #a8ff78;
+    background: -webkit-linear-gradient(to right, #a8ff78, #78ffd6);
+    background: linear-gradient(to right, #a8ff78, #78ffd6);
+    border-radius: 30%;
+  }
+  .seatVip {
+    background: yellow;
+    border-radius: 30%;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .seat1 {
+    border: 3px solid #ff013c;
+  }
+  .info {
+    background-color: #222;
+    padding: 40px 20px 10px 30px;
+    font-size: 13px;
+  }
+
+  .screen {
+    width: 100%;
+    height: 80px;
+    border: solid 8px #000;
+    border-color: #ff6565 transparent transparent transparent;
+    border-radius: 70%/100px 100px 0 0;
+    filter: drop-shadow(3px 3px 10px #ff6565);
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fefefe;
+      width: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      .close {
+        position: relative;
+        padding: 5px;
+        span {
+          color: red;
+          position: absolute;
+          top: -170%;
+          right: -2%;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .ticket {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    background: #fbfbfb;
+    box-shadow: 2px 2px 15px 0px #ab9b0d;
+    text-align: center;
+    p {
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0;
+    }
+    .ticketHeader {
+      // float: right;
+    }
+    th {
+      font-size: 12px;
+      font-weight: initial;
+    }
+    .headerTable,
+    tfoot {
+      th {
+        font-weight: bold;
+      }
+    }
+    &:before,
+    &:after {
+      left: 0;
+      content: "";
+      position: absolute;
+      left: 5px;
+      height: 6px;
+      width: 100%;
+    }
+
+    &:before {
+      left: 0;
+      top: -5px;
+      background: radial-gradient(
+          circle,
+          transparent,
+          transparent 50%,
+          #fbfbfb 50%,
+          #fbfbfb 100%
+        ) -10px -8px / 16px 16px repeat-x;
+    }
+
+    &:after {
+      left: 0;
+      bottom: -5px;
+      background: radial-gradient(
+          circle,
+          transparent,
+          transparent 50%,
+          #fbfbfb 50%,
+          #fbfbfb 100%
+        ) -10px -2px / 16px 16px repeat-x;
+    }
+  }
+
+  .ticket__content {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    border: 6px solid #d8d8d8;
+    padding: 10px;
+  }
+  .bottomContent {
+    p {
+      font-size: 10px;
+      margin-bottom: initial;
+      letter-spacing: 0;
+    }
+    padding-bottom: 30px;
+  }
+}
+// BookingTicket
+
+// Footer
+.footer {
+  padding: 40px 0;
+  background-color: black;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px 0 white;
+  .topFooter {
+    display: none;
+  }
+  .partner {
+    display: none;
+  }
+  .sign {
+    margin-left: initial;
+  }
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+  h2 {
+    font-size: 17px;
+    font-family: "Georama", sans-serif;
+  }
+  a {
+    font-size: 10px;
+    color: #ff013c;
+  }
+  p {
+    cursor: pointer;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    font-family: "Georama", sans-serif;
+    &:hover {
+      color: #ff013c;
+    }
+    white-space: pre-wrap;
+  }
+  img {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .bottomF {
+    p {
+      text-transform: initial;
+      margin: initial;
+      cursor: initial;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+// Footer
+// Contact
+.contact {
+  background-color: black;
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  form {
+    font-family: "Georama", sans-serif;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 60px;
+    margin: 12px auto;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  form > div {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 0 20px;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  form > div > img {
+    filter: invert(1);
+    width: 100px;
+  }
+
+  form > input,
+  form > textarea {
+    padding: 12px;
+    margin: 12px auto;
+    border: 1px solid #ccc;
+    color: #ddd;
+    background-color: #222;
+    border-radius: 4px;
+    display: block;
+    width: 70vw;
+  }
+
+  form > textarea {
+    height: 100px;
+    resize: none;
+  }
+
+  form > input[type="submit"] {
+    max-width: 20vw;
+    padding-left: 1%;
+    padding-right: 1%;
+    cursor: pointer;
+    transition: 0.35s;
+  }
+
+  form > input[type="submit"]:hover {
+    background-color: #555;
+  }
+}
+// Contact
+// detailMovie
+.detailMovie {
+  padding: 80px 0;
+  background-color: rgba(0, 0, 0, 0.911);
+  background-image: url("./assets/img/asfalt-light.png");
+  font-family: "Georama", sans-serif;
+  .movieName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+  }
+  .ant-tabs {
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    tr {
+      color: white;
+      border-color: transparent;
+      border-style: initial;
+      border-width: initial;
+      padding: initial;
+      font-size: 1rem;
+      font-weight: initial;
+    }
+    th,
+    td {
+      padding-bottom: 10px;
+    }
+    p {
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      color: white;
+      text-decoration: initial;
+    }
+    .ant-tabs-nav::before {
+      display: none;
+    }
+    background: rgba(255, 255, 255, 0.144);
+    min-height: 400px;
+    max-height: 600px;
+    .ant-tabs-content-holder {
+      text-align: center;
+
+      .textContent {
+        height: 400px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar {
+          width: 10px;
+          background-color: white;
+        }
+        &::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0);
+          background-color: white;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 50px;
+          background-color: #ff013c;
+        }
+      }
+    }
+    .ant-tabs-nav-operations {
+      background: white;
+    }
+    .ant-tabs-tab {
+      color: white !important;
+      background: #ff013c !important;
+    }
+    .ant-tabs-tab-active {
+      background: white !important;
+      .ant-tabs-tab-btn {
+        color: black !important;
+      }
+    }
+  }
+  .fa-times-circle {
+    position: absolute;
+    top: -10%;
+    z-index: 9;
+    right: 0;
+    font-size: 1.5rem;
+    color: white;
+    padding: 0;
+    border: 0;
+    &:hover {
+      color: rgb(255, 100, 100);
+    }
+  }
+  .fa-star {
+    color: yellow;
+  }
+  img {
+    width: 100%;
+  }
+  .item {
+    position: relative;
+    .content1 {
+      font-size: 1rem;
+      text-align: center;
+      width: 100%;
+
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.2)
+      );
+
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        margin: 5px 0;
+        color: white;
+      }
+      .fa-play {
+        margin-bottom: 10%;
+        color: white;
+        transition: all 0.4s ease-out;
+        &:hover {
+          color: #ff013c;
+          font-size: 150%;
+        }
+      }
+    }
+  }
+}
+
+// detailMovie
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  //  MovieItem
+  .movieItem {
+    h1 {
+      font-size: 30px;
+    }
+    .movieScroll {
+      .card {
+        &:hover .face.face2,
+        &:active .face.face2 {
+          transform: translateY(0);
+        }
+        img {
+          width: 100%;
+          height: 250px;
+        }
+        .face {
+          &.face2 {
+            text-align: center;
+            .trailer {
+              display: block;
+              margin-bottom: 20px;
+              margin-top: 30px;
+              .fa-play-circle {
+                font-size: 50px;
+              }
+            }
+            .fa-star {
+              font-size: 1rem;
+            }
+            span {
+              font-size: 1rem;
+            }
+
+            .button1,
+            .button1::after {
+              margin-left: 40px;
+
+              font-size: 1rem;
+            }
+            a {
+              h2 {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //  MovieItem
+  // Booking Ticket
+  .BookingTicket {
+    font-family: "Georama", sans-serif;
+    .seat {
+      button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        font-size: 10px;
+      }
+    }
+
+    .ticket {
+      text-align: left;
+      .ticketHeader {
+        float: right;
+      }
+    }
+    .bottomContent {
+      p {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  // Booking Ticket
+  // Info
+  .info {
+    .form {
+      input {
+        width: 50%;
+
+        &:hover {
+          width: 70%;
+        }
+      }
+    }
+  }
+  // Info
+  // Footer
+  .footer {
+    .topFooter {
+      display: block;
+    }
+  }
+  // Footer
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  // Navbar
+  .navbar {
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-link {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  // Navbar
+  // Footer
+  .footer {
+    .partner {
+      display: initial;
+    }
+  }
+  // Footer
+  // Movie
+  .movieItem {
+    h1 {
+      font-size: 30px;
+    }
+
+    .movieScroll {
+      .card {
+        .face {
+          &.face2 {
+            .trailer {
+              margin-bottom: 40px;
+              margin-top: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Movie
+  // Booking Ticket
+  .BookingTicket {
+    .ticket {
+      .ticketHeader {
+        float: initial;
+      }
+      text-align: center;
+    }
+  }
+  // Booking Ticket
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  //404 Page
+  .page404 {
+    .section-404 {
+      .title {
+        font-size: 2rem;
+      }
+    }
+  }
+  //End 404 Page
+  //Navbar
+  .navbar {
+    .sign {
+      margin-right: auto;
+      margin-left: 10%;
+    }
+    .navbar-brand {
+      margin-left: initial;
+    }
+    .navbar-collapse {
+      margin-left: 60px;
+
+      .navbar-nav {
+        align-items: center;
+        .nav-item {
+          &:after {
+            bottom: -70%;
+            left: 0;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+        }
+
+        .nav-link {
+          font-size: 1rem;
+          margin-bottom: initial;
+          white-space: nowrap;
+        }
+        .nav-link.active::after {
+          width: 100%;
+          left: 0;
+          bottom: -70%;
+        }
+      }
+      .button1 {
+        margin-top: 20px;
+      }
+      .button1,
+      .button1::after {
+        font-size: 1rem;
+      }
+    }
+  }
+  //End Navbar
+  //HomeDownApp
+  .HomeDownApp {
+    h1 {
+      font-size: 2.5rem;
+    }
+    .button1,
+    .button1::after {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  //HomeDownApp
+  .cinemaComplex {
+    display: block;
+  }
+  //HomeDownApp
+  //  MovieItem
+  .movieItem {
+    h1 {
+      font-size: 40px;
+    }
+    .button1,
+    .button1::after {
+      font-size: 1rem;
+    }
+    .movieScroll {
+      .card {
+        &:hover .face.face2,
+        &:active .face.face2 {
+          transform: translateY(0);
+        }
+        img {
+          width: 100%;
+          height: 250px;
+        }
+        .face {
+          &.face2 {
+            .trailer {
+              margin-bottom: 20px;
+              margin-top: 20px;
+            }
+            span {
+              display: block;
+            }
+            .button1,
+            .button1::after {
+              margin: initial;
+
+              font-size: 1rem;
+            }
+            .button1 {
+              margin-top: 15px;
+            }
+            a {
+              h2 {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //  MovieItem
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  //Navbar
+  .sign {
+    font-size: 2em;
+  }
+  .navbar {
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-link {
+          font-size: 1.3rem;
+        }
+        .nav-item {
+          &:after {
+            bottom: -60%;
+          }
+        }
+        .nav-link.active::after {
+          bottom: -60%;
+        }
+      }
+      .button1,
+      .button1::after {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  //End Navbar
+  //  MovieItem
+  .movieItem {
+    .button1,
+    .button1::after {
+      font-size: 1.2rem;
+    }
+    .movieScroll {
+      .card {
+        img {
+          width: 100%;
+          height: 250px;
+        }
+        .face {
+          &.face2 {
+            .trailer {
+              margin-bottom: 20px;
+              margin-top: 20px;
+            }
+            span {
+              display: inline;
+            }
+            .button1,
+            .button1::after {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  //  MovieItem
+
+  // Booking Ticket
+  .BookingTicket {
+    p,
+    button {
+      font-size: 12px !important;
+    }
+    .ticket {
+      .ticketHeader {
+        float: right;
+      }
+      text-align: left;
+    }
+  }
+  // Booking Ticket
+}
