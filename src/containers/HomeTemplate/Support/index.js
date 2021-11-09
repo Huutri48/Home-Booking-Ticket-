@@ -6,7 +6,7 @@ export default class Support extends Component {
     e.preventDefault();
     swal({
       title:
-        "Xin Cảm Ơn Bạn Đã Phản Hồi Chúng Tôi!",
+        "Xin Cảm Ơn Bạn Đã Phản Hồi Cho Chúng Tôi!",
       icon: "success",
       button: "OK",
     });
